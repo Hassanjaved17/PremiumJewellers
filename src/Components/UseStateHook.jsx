@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect} from 'react'
+=======
+import React, { useState } from 'react'
+>>>>>>> 9b41e806283413e1ca4e426be24804e7d99e6c60
 
 const UseStateHook = () => {
 const [count ,SetCount]= useState(0);
