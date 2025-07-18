@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-
 const productsData = [
 
-=======
-const productsData = [
->>>>>>> 9b41e806283413e1ca4e426be24804e7d99e6c60
     {
         id: 1,
         product_name: "bunched leaves earrings",
