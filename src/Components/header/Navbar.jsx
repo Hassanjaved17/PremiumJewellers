@@ -49,6 +49,7 @@ const Navbar = () => {
               <Link to="/login">
                 <motion.p
                   whileHover={{ translateY: -3 }}
+                  whileTap={{ scale: 0.95 }}
                   className="hover:text-[#0B21BF]"
                 >
                   Login
@@ -57,6 +58,7 @@ const Navbar = () => {
               <Link to="/register">
                 <motion.p
                   whileHover={{ translateY: -3 }}
+                  whileTap={{ scale: 0.95 }}
                   className="hover:text-[#0B21BF]"
                 >
                   Register
@@ -65,6 +67,7 @@ const Navbar = () => {
               <Link to="/products">
                 <motion.p
                   whileHover={{ translateY: -3 }}
+                  whileTap={{ scale: 0.95 }}
                   className="hover:text-[#0B21BF]"
                 >
                   Products
@@ -125,13 +128,28 @@ const Navbar = () => {
 
               {/* Mobile Links */}
               <Link to="/login">
-                <p className="hover:text-[#0B21BF]">Login</p>
+                <motion.p
+                  whileTap={{ scale: 0.95 }}
+                  className="hover:text-[#0B21BF]"
+                >
+                  Login
+                </motion.p>
               </Link>
               <Link to="/register">
-                <p className="hover:text-[#0B21BF]">Register</p>
+                <motion.p
+                  whileTap={{ scale: 0.95 }}
+                  className="hover:text-[#0B21BF]"
+                >
+                  Register
+                </motion.p>
               </Link>
               <Link to="/products">
-                <p className="hover:text-[#0B21BF]">Products</p>
+                <motion.p
+                  whileTap={{ scale: 0.95 }}
+                  className="hover:text-[#0B21BF]"
+                >
+                  Products
+                </motion.p>
               </Link>
             </motion.div>
           )}

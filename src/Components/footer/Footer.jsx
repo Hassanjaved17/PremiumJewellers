@@ -31,17 +31,45 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start gap-6 sm:gap-4 pt-2">
-            <GrInstagram className="text-2xl hover:scale-110 transition-all cursor-pointer" />
-            <FaFacebookSquare className="text-2xl hover:scale-110 transition-all cursor-pointer" />
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GrInstagram className="text-2xl hover:scale-110 transition-all cursor-pointer" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookSquare className="text-2xl hover:scale-110 transition-all cursor-pointer" />
+            </a>
           </div>
 
           {/* Contact Info */}
           <div className="text-sm text-gray-600 space-y-1 break-words">
-            <p className="hover:text-[#0B21BF] cursor-pointer">📞 042-111 801 800</p>
-            <p className="hover:text-[#0B21BF] cursor-pointer">
-              📧 wecare@tesoro.pk
+            <p>
+              📞{" "}
+              <a
+                href="tel:042111801800"
+                className="hover:text-[#0B21BF] cursor-pointer"
+              >
+                042-111 801 800
+              </a>
             </p>
-            <p className="hover:text-[#0B21BF] cursor-pointer">📍 3-Z DHA Lahore</p>
+            <p>
+              📧{" "}
+              <a
+                href="mailto:wecare@tesoro.pk"
+                className="hover:text-[#0B21BF] cursor-pointer"
+              >
+                wecare@tesoro.pk
+              </a>
+            </p>
+            <p className="hover:text-[#0B21BF] cursor-pointer">
+              📍 3-Z DHA Lahore
+            </p>
             <p className="hover:text-[#0B21BF] cursor-pointer">
               🕒 11:00 AM - 7:00 PM (Mon-Sat)
             </p>
@@ -68,6 +96,11 @@ const Footer = () => {
             <Link className="hover:text-[#0B21BF] cursor-pointer">Stores</Link>
           </div>
         </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center pt-8 text-xs text-gray-500">
+        © {new Date().getFullYear()} Premium Jeweller's. All rights reserved.
       </div>
     </footer>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { IoShareSocialOutline } from "react-icons/io5";
 import { useParams } from 'react-router-dom';
 import productsData from '../Data/ProductsData';
+import { motion } from 'framer-motion';
 
 const DetailedPage = () => {
   const { id } = useParams();
@@ -9,8 +10,15 @@ const DetailedPage = () => {
 
   return (
     <div className="products-details bg-white flex flex-col md:flex-row px-4 sm:px-10 py-10 gap-8">
+      
       {/* Product Image */}
-      <div className="product-img overflow-hidden relative border border-[#E5E5E5] group shadow-md rounded-3xl w-full md:w-[60%]">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="product-img overflow-hidden relative border border-[#E5E5E5] group shadow-md rounded-3xl w-full md:w-[60%]"
+      >
         <button className="absolute top-3 right-3 bg-white/80 hover:bg-white p-2 rounded-full shadow-md z-10">
           <IoShareSocialOutline className="text-gray-400 w-5 h-5" />
         </button>
@@ -19,10 +27,16 @@ const DetailedPage = () => {
           alt={details.product_name}
           className="group-hover:scale-90 scale-100 transition-transform duration-900 ease-in-out rounded-3xl w-full"
         />
-      </div>
+      </motion.div>
 
       {/* Product Details */}
-      <div className="w-full md:w-[40%]">
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full md:w-[40%]"
+      >
         <div className="product-heading mt-5">
           <p className="font-semibold text-lg">{details.product_name}</p>
           <p className="text-sm text-[#636563] mt-1">STYLE # 15413</p>
@@ -36,7 +50,7 @@ const DetailedPage = () => {
             CHECKOUT
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
